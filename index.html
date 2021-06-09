@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment form</title>
+</head>
+<body bgcolor="yellow">
+    <script>
+      function hh(){
+        alert("Your Form has been Submitted");}
+    function guessnumber(){
+          const random=Math.floor(Math.random()*10)+1;
+          let number=parseInt(prompt("Guess a number from 1 TO 10"));
+          while(number!==random){
+          number=parseInt(prompt("Guess a number from 1 to 10"));
+          }
+            if(number == random){
+                alert("You guessed the correct number");
+
+            }
+          
+    }  
+    
+       
+    </script>
+    <style>
+        h1{
+            
+            background-color:black;
+            color:white;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+            padding: 50px;
+        }
+     
+        button{
+            color:white ;
+            background-color: black;
+        }
+    </style>
+    <form>
+        <h1><center>Payment Form</center></h1>
+        
+        <h2>Contact information</h2>
+        <p>Required Field are followed by *</p>
+        <p>Name: *<input type="text" name="name"id="name" required></p>
+        <fieldset
+        <legend>Gender *</legend>
+            Male <input  type="radio" name="gender"  id="male" required  > 
+            Female <input  type="radio" name="gender"  id="female" required > 
+    </fieldset> 
+    <p>Address: *<textarea name="adress" id="address" cols="100" rows="10" required></textarea></p>
+    <p>Email: <input type="email" name="email" id="email" required></p>
+    <p>Pincode: <input type="number" name="pincode" id="pincode" required> </p>
+     <hr>
+     <h2>Payment Information *</h2>
+     <p>
+         Card Type: *
+         <select name="card_type" id="card_type" required>
+             <option value="">--Select a Card type</option>
+             <option value="visa">Visa</option>
+             <option value="rupay"> Rupay</option>
+             <option value="mastercard">Master Card</option>
+         </select>
+
+     </p>
+     <p>Card Number *<input type="number"  name="card_number"  id="card_number" required></p>
+     <p>
+         Expiration Date *: <input type="date" name="exp_date" id="exp_date" required>
+     </p>
+     <p>CVV * <input type="password" name="CVV" id="CVV"required></p>
+     <button onclick="hh()" >Pay Now </button>
+     <button onclick="guessnumber()">Guess the number game</button>
+     <marquee>This is a sample website made by Navdeep Shah </marquee>
+    </form>
+
+</body>
+</html>
